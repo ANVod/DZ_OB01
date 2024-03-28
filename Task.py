@@ -1,5 +1,5 @@
 class Task:
-    def __init__(self, description, due_date, is_done=False):  # Исправлено
+    def __init__(self, description, due_date, is_done=False):
         self.description = description
         self.due_date = due_date
         self.is_done = is_done
@@ -7,12 +7,12 @@ class Task:
     def mark_as_done(self):
         self.is_done = True
 
-    def __str__(self):  # Исправлено с выравниванием
+    def __str__(self):
         status = "Выполнено" if self.is_done else "Не выполнено"
         return f"'{self.description}', срок: {self.due_date}, статус: {status}"
 
 class TaskManager:
-    def __init__(self):  # Исправлено
+    def __init__(self):
         self.tasks = []
 
     def add_task(self, task):
@@ -32,7 +32,6 @@ class TaskManager:
             if not task.is_done:
                 print(task)
 
-# Пример использования
 manager = TaskManager()
 
 manager.add_task(Task("Купить молоко", "01-05-2023"))
