@@ -1,3 +1,7 @@
+class Item:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
 class Store:
     def __init__(self, name, address):
         self.name = name
